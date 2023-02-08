@@ -11,7 +11,7 @@ export const enterSite = () => {
   gsap.to('.preloader', {
     ease: 'power2.inOut',
     yPercent: -100,
-    duration: 2,
+    duration: 1,
     delay: 2,
   })
 }
