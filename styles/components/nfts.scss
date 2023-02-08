@@ -107,12 +107,16 @@
     padding-left: 16px;
     padding-right: 16px;
     position: relative;
+    width: 100%;
 
     img {
+      max-width: 400px;
+      
       @include mq('>=tablet') {
         position: absolute;
         bottom: -300px;
         right: -350px;
+        max-width: 100%;
       }
     }
   }

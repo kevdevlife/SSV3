@@ -38,7 +38,6 @@ export const shibaNfts = () => {
         start: '0% 0%',
         end: '100% 0%',
         pin: '#ImgWrapper',
-        markers: true,
         scrub: 2.2,
         onEnter: () => {
           // gsap.to('.js-nft-title', { opacity: 0 })
@@ -399,16 +398,43 @@ export const footerAnimation = () => {
 export const animatePresale = () => {
   const presale = document.getElementById('presale')
 
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: presale,
-      start: 'top 30%',
-      end: 'bottom 100%',
-      toggleActions: 'play none none none',
-      markers: true,
-      onEnter: () => {
-        initProgressBar()
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: presale,
+        start: 'top 30%',
+        end: 'bottom 100%',
+        toggleActions: 'play none none none',
+        onEnter: () => {
+          initProgressBar()
+        },
       },
-    },
-  })
+    })
+    .from('.presale__shia', {
+      y: '100%',
+    })
+}
+
+export const animateTokenomics = () => {
+  const tokenomics = document.getElementById('tokenomics')
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: tokenomics,
+        start: 'top 30%',
+        end: 'bottom 100%',
+        toggleActions: 'play none none none',
+      },
+    })
+    .from('.doughnut-wrapper', {
+      ease: 'Power1.out',
+      x: '-150%',
+      duration: 1.5,
+    })
+    .from('.tokenomics-list', {
+      ease: 'Power1.out',
+      x: '150%',
+      duration: 1.5,
+    })
 }

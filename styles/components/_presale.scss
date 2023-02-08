@@ -1,8 +1,22 @@
 .presale {
     position: relative;
     overflow: hidden;
-    
+    background: #18171F;
+    width: 100%;
+    border-bottom-left-radius: 200vw 40vw;
+    border-bottom-right-radius: 200vw 40vw;
+    box-shadow: 0 0 3px #18171F, 0 0 3px #18171F inset;
+    padding-bottom: pxToRem(20px);
+    margin-bottom: pxToRem(60px);
 
+    @include mq('>=desktop') {
+        padding-bottom: pxToRem(100px);
+        border-bottom-left-radius: 100vw 40vw;
+        border-bottom-right-radius: 100vw 40vw;
+        width: 200vw;
+        margin-left: -50vw;
+    }
+    
     .container {
         position: relative;
         height: 100%;
@@ -19,7 +33,7 @@
             bottom: 0;
             width: 760px;
             height: 760px;
-            bottom: -100px;
+            bottom: -177px;
             right: -60px;    
         }
     }

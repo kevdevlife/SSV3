@@ -72,10 +72,14 @@
     text-align: center;
     padding-top: pxToRem(120px);
     padding-bottom: pxToRem(120px);
-    margin-bottom: 2rem;
     z-index: 2;
     background: #18171F;
 
+    .container {
+        overflow: hidden;
+    }
+    
+    
     &__grid {
         margin-top: pxToRem(70px);
     }

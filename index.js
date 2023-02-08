@@ -9,6 +9,7 @@ import {
   animateShiaverse,
   footerAnimation,
   animatePresale,
+  animateTokenomics
 } from './scripts/animationsv2'
 import { stickyHeader } from './scripts/stickyHeader'
 
@@ -23,6 +24,7 @@ async function init() {
   footerAnimation()
   stickyHeader()
   animatePresale()
+  animateTokenomics()
 
   // initProgressBar()
   // animate()
