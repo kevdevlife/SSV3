@@ -1,0 +1,95 @@
+.staking {
+    position: relative;
+    padding-top: pxToRem(140px);
+    padding-bottom: pxToRem(140px);
+
+    .grid {
+        @include mq(">=desktop") {
+            align-items: center;
+            height: 100%;
+            // padding-top: pxToRem(300px);
+        }
+    }
+    
+    @include mq(">=desktop") {
+        padding-top: pxToRem(90px);
+    }
+    
+    &__image {
+        position: relative;
+        margin-top: pxToRem(60px);
+        min-height: 495px;
+    
+        @include mq('<=tablet') {
+            min-height: 220px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and ( max-width: 414px) {
+            max-width: 375px;
+        }
+
+        &--1,
+        &--2,  
+        &--3 {
+            position: absolute;
+            top: 0;
+        }
+
+        &--1 {
+            top: 0;
+            animation: float-staking-1 12s ease-in-out infinite;
+
+            @include mq('<=tablet') {
+                max-width: 300px;
+            }
+        }
+
+        &--2 {
+            animation: float-staking-2 8s ease-in-out infinite;
+            bottom: -100px;
+            right: 0;
+
+            @include mq('<=tablet') {
+                max-width: 300px;
+            }
+        }
+
+        &--3 {
+            right: -50px;
+            animation: float-staking-3 6s ease-in-out infinite;
+            z-index: -1;
+
+            @include mq('<=tablet') {
+                max-width: 150px;
+                right: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        @include mq(">=desktop") {
+            margin-left: auto;
+        }
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     width: pxToRem(480px);
+        //     height: pxToRem(480px);
+        //     background: radial-gradient(circle, rgba(92, 92, 136, 1) 0%, rgba(31, 30, 41, 1) 70%);
+        //     border-radius: 50%;
+        //     z-index: -1;
+        //     opacity: 0.5;
+
+        //     @include mq(">=desktop") {
+        //         width: pxToRem(1040px);
+        //         height: pxToRem(1040px);
+        //     }
+        // }
+    }
+}

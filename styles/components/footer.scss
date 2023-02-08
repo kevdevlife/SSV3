@@ -1,0 +1,29 @@
+.footer {
+    &__logo {
+        display: inline-block;
+
+        @include mq(">=desktop") {
+            margin-bottom: pxToRem(80px);
+        }
+        
+        svg {
+            width: 240px;
+            height: auto;
+
+            @include mq(">=desktop") {
+                width: 314px;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: pxToRem(15px);
+        margin-top: pxToRem(30px);
+        margin-bottom: pxToRem(30px);
+        letter-spacing: -0.01em;
+
+        @include mq(">=desktop") {
+            margin-bottom: pxToRem(60px);
+        }
+    }
+}

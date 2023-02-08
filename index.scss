@@ -1,0 +1,307 @@
+@import "styles/variables";
+@import "styles/utils/functions";
+@import "styles/utils/media-queries";
+@import "styles/utils/easings";
+// Importing the reset
+@import "styles/reset";
+
+// Importing the global styles
+@import "styles/global";
+@import "styles/utils/modifiers";
+
+@import "styles/base/grid";
+@import "styles/base/placeholders";
+@import "styles/base/fonts";
+@import "styles/base/btn";
+@import "styles/base/util";
+@import "styles/base/general";
+@import "styles/base/animations";
+
+// Sections
+@import "styles/components/header";
+@import "styles/components/sections";
+@import "styles/components/hero";
+@import "styles/components/games";
+@import "styles/components/shiaverse";
+@import "styles/components/nfts";
+@import "styles/components/staking";
+@import "styles/components/community";
+@import "styles/components/presale";
+@import "styles/components/socials";
+@import "styles/components/footer";
+
+.js-kart-text {
+    position: absolute;
+    height: auto;
+    width: 380px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 2;
+
+    @include mq(">=desktop-large") {
+        transform: translate(-56%, -55%);
+        width: 727px;
+    }
+}
+
+.js-kart-coins {
+    position: absolute;
+    top: -60px;
+    right: -55px;
+    height: auto;
+    max-width: 170px;
+    z-index: 5;
+
+    @include mq(">=desktop") {
+        left: -175px;
+        max-width: 200px;
+    }
+}
+
+.js-staking-image {
+    max-width: 516px;
+}
+
+/**
+ * Tokenomics
+ */
+.tokenomics {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-top: pxToRem(120px);
+    padding-bottom: pxToRem(120px);
+    margin-bottom: 2rem;
+    z-index: 2;
+    background: #18171F;
+
+    &__grid {
+        margin-top: pxToRem(70px);
+    }
+
+    @include mq('<=tablet') {
+        padding-bottom: pxToRem(60px);
+    }
+}
+
+.tokenomics-list {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__item {
+        position: relative;
+        background-color: #18171f;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        padding: 0 pxToRem(32px);
+        margin-bottom: pxToRem(8px);
+        --theme-color: #fda000;
+
+        &:nth-child(2) {
+            --theme-color: #fc6900;
+        }
+
+        &:nth-child(3) {
+            --theme-color: #c33f05;
+        }
+
+        &:nth-child(4) {
+            --theme-color: #bc035e;
+        }
+
+        &:nth-child(5) {
+            --theme-color: #5222f2;
+        }
+
+        &:nth-child(6) {
+            --theme-color: #487cdd;
+        }
+
+        &:nth-child(7) {
+            --theme-color: #65cceb;
+        }
+
+        &:nth-child(8) {
+            --theme-color: #8114d1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 6px;
+            background-color: var(--theme-color);
+        }
+
+        .text-theme {
+            color: var(--theme-color);
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        &:nth-child(1) {
+            flex-grow: 1;
+        }
+
+        &:nth-child(2) {
+            text-align: right;
+        }
+    }
+
+    &__title {
+        font-size: pxToRem(20px);
+        font-weight: bold;
+
+        @include mq('<=tablet') {
+            font-size: pxToRem(18px);            
+        }
+    }
+
+    &__small-text {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: pxToRem(13px);
+        font-weight: medium;
+
+        @include mq('<=tablet') {
+            font-size: pxToRem(9px);            
+        }
+    }
+
+    &__number {
+        font-size: pxTorem(20px);
+        font-weight: bold;
+
+        @include mq('<=tablet') {
+            font-size: pxToRem(14px);
+        }
+    }
+}
+
+#gradient-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    --gradient-color-1: #1f1e29;
+    --gradient-color-2: #18171f;
+    --gradient-color-3: #5C5C88;
+    --gradient-color-4: #A06932;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
+/**
+ * .prelaoder
+ */ 
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(#ffc22d 0%, #ffa229 100%);
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+            max-width: 250px;
+        }
+    }
+
+    &__text {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+
+.rocket {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 350px;
+    height: auto;
+}
+
+.doughnut-wrapper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 449px;
+    max-height: 462px;
+    height: 100%;
+    width: 100%;
+    margin-bottom: pxToRem(24px);
+
+    @include mq(">=tablet") {
+        margin-top: pxToRem(84px);
+    }
+
+    .doughnut-supply {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-42.5%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        pointer-events: none;
+
+        &__text-top {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        &__text-bottom {
+            color: rgba(255, 255, 255);
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.js-match {
+    cursor: pointer;
+}

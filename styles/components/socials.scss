@@ -1,0 +1,49 @@
+.social-list {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: pxToRem(30px);
+    margin-bottom: pxToRem(30px);
+
+    @include mq(">=desktop") {
+        margin-bottom: pxToRem(120px);
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: pxToRem(16px);
+
+            @include mq(">=desktop") {
+                margin-right: pxToRem(80px);
+            }
+        }
+    }
+
+    &__item-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: pxToRem(48px);
+        height: pxToRem(48px);
+        margin-bottom: pxToRem(10px);
+    }
+
+    &__item-link {
+        display: block;
+        transition: 300ms transform $easeInOut;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    &__item-text {
+        font-size: pxToRem(14px);
+
+        @include mq(">=desktop") {
+            font-size: pxTorem(15px);
+        }
+    }
+}

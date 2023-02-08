@@ -1,0 +1,80 @@
+.games {
+    position: relative;
+    padding-top: pxToRem(60px);
+    padding-bottom: pxToRem(60px);
+    background: #18171f;
+    overflow: hidden;
+    min-height: 100vh;
+
+    @include mq('>=tablet') {
+        padding-top: pxToRem(160px);
+        padding-bottom: pxToRem(60px);
+    }
+    
+
+    &__container {
+        @include mq('>=tablet') {
+            margin-top: 150px;
+        }        
+    }
+
+    &__text {
+        position: relative;
+    }
+
+    &__main {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__image {
+        position: relative;
+        margin-top: pxToRem(40px);
+
+        @include mq(">=tablet") {
+            margin-top: pxToRem(20px);
+        }
+    }
+
+    &__gradient {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-55%, -55%);
+        z-index: 1;
+        width: pxToRem(340px);
+        height: pxToRem(340px);
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(160, 105, 50, 1) 0%, rgba(24, 23, 31, 1) 70%);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        @include mq(">=desktop") {
+            width: pxToRem(780px);
+            height: pxToRem(780px);
+        }
+    }
+
+    .kart-img {
+        position: relative;
+        z-index: 2;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .kart {
+        position: relative;
+        z-index: 4;
+        max-width: 100%;
+        height: auto;
+        transform-origin: 50% 50%;
+        transform: translateX(-60px);
+    }
+
+    &__col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

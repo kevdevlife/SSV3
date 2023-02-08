@@ -1,0 +1,37 @@
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: $container-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    @include mq(">=tablet") {
+        max-width: 100%;
+        padding-left: pxToRem(40px);
+        padding-right: pxToRem(40px);
+    }
+
+    @include mq(">=desktop") {
+        max-width: 960px;
+    }   
+
+    @include mq(">=desktop-large") {
+        max-width: 1140px;
+    }
+
+    @include mq(">=desktop-large") {
+        max-width: 1380px; // @TODO: check if its worth it 
+    }
+
+    @include mq(">=desktop-xlarge") {
+        max-width: 1432px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+

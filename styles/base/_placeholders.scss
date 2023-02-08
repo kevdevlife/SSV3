@@ -1,0 +1,39 @@
+/**
+ * Placeholders
+ */ 
+ %title {
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
+    font-size: pxToRem(32px);
+    margin-bottom: pxToRem(20px);
+    
+    @include mq('>=desktop') {
+        font-size: pxToRem(45px);
+        line-height: 1.33;
+    }
+}
+
+%subtitle {
+    text-transform: uppercase;
+    color: $color-primary;
+    font-weight: $font-weight-bold;    
+    font-size: pxToRem(17px);
+    letter-spacing: 0.2em;
+    @extend %text-gradient;
+    
+    @include mq('>=desktop') {
+        line-height: 2.7;
+        font-size: pxToRem(24px);
+        line-height: 1.33;
+    }
+}
+
+%text-gradient {
+    background: linear-gradient(120deg, #FC6400, #FDA200, #FF5D20);
+    background-size: 800% 800%;
+    text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shine 12s ease-in-out infinite;
+}

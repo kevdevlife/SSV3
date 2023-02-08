@@ -1,0 +1,25 @@
+.section {
+    // background-color: #18171F;
+
+    &__title {
+        @extend %title;
+
+        &--large {
+            @include mq('>=desktop') {
+                font-size: 60px;
+            }
+        }
+    }
+
+    &__subtitle {
+        @extend %subtitle;
+    }
+
+    &__text {
+        margin-bottom: pxToRem(30px);
+    }
+
+    &__heading {
+        padding-top: pxToRem(100px);
+    }
+}

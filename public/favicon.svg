@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="Group_3" data-name="Group 3" transform="translate(-350 -322)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="35" cy="35" r="35" transform="translate(350 322)" fill="#ff8024"/>
+    <g id="Group_2" data-name="Group 2" transform="translate(237.299 317.171)">
+      <path id="Path_1" data-name="Path 1" d="M119.854,55.632l3.1-7.356c2.365,1.471,6.936,3.2,9.931,3.2,2,0,3.625-.683,3.625-3.048,0-2.207-2.207-2.942-5.254-3.888-4.466-1.314-10.088-3.468-10.088-10.508s5.411-10.982,12.663-10.982a18.36,18.36,0,0,1,12.873,5.2l-4.677,5.937c-2.784-2.049-5.727-3.573-8.091-3.573-1.787,0-3.363.736-3.363,2.68,0,2.259,2.417,3.047,5.674,4.1,4.782,1.577,9.931,3.626,9.931,10.666,0,7.3-5.517,11.192-13.346,11.192a26.372,26.372,0,0,1-12.978-3.626" transform="translate(14.847 -0.862)" fill="#fff"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="6.332" height="7.124" transform="translate(141.124 16.829)" fill="#fff"/>
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="6.332" height="7.124" transform="translate(149.039 16.829)" fill="#fff"/>
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="6.332" height="7.124" transform="translate(141.124 55.613)" fill="#fff"/>
+      <rect id="Rectangle_6" data-name="Rectangle 6" width="6.332" height="7.124" transform="translate(149.039 55.613)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

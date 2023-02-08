@@ -1,0 +1,39 @@
+.community {
+    position: relative;
+    // padding-top: pxToRem(200px);
+
+    .bg-animation {
+        z-index: -1;
+    }
+    
+    &__container {
+        position: relative;
+        z-index: 3;
+        padding-left: $gutter;
+        padding-right: $gutter;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 940px;
+    }
+
+    @include mq(">=desktop") {
+        margin-top: pxToRem(160px);
+    }
+
+    &__title {
+        @extend %title;
+    }
+
+    &__text {
+        font-size: pxToRem(15px);
+        margin-bottom: pxToRem(64px);
+
+        @include mq(">=desktop") {
+            font-size: pxToRem(17px);
+        }
+
+        p {
+            font-size: inherit;
+        }
+    }
+}

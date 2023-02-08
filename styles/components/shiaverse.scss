@@ -1,0 +1,120 @@
+.shiaverse {
+    position: relative;
+    width: 100%;
+    color: #000;
+    padding-top: pxToRem(60px);
+    padding-bottom: pxToRem(60px);
+    background: linear-gradient(#ffc22d 0%, #ffa229 100%);
+
+    @include mq(">=tablet") {
+        padding-top: pxToRem(260px);
+        padding-bottom: pxToRem(260px);
+    }
+
+    .section__subtitle {
+        color: #000;
+        background: transparent;
+        -webkit-text-fill-color: #000;
+    }
+
+    .btn {
+        color: #000;
+        border: 1px solid #000;
+    }
+
+    &__container {
+        height: 100%;
+        
+        @include mq(">=tablet") {
+            align-items: center;
+            height: 100%;
+        }
+    }
+    
+    .shia-vr {
+        transform: rotate(7deg);
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+        
+        @include mq(">=tablet") {
+            position: absolute;
+            top: 50%;
+            height: 800px;
+            width: 800px;
+            left: 50%;
+            transform: translate(-30%, -40%);
+        }
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     width: pxToRem(480px);
+        //     height: pxToRem(480px);
+        //     background: radial-gradient(circle, rgba(92,92,136,1) 0%, rgba(31,30,41,1) 60%);
+        //     // animation: gradient-circle-animation 10s ease infinite; 
+        //     background-repeat: no-repeat;
+        //     background-position: 100% 100%;
+        //     border-radius: 50%;
+        //     z-index: -1;
+        //     opacity: 0.8;
+
+        //     @include mq('>=desktop') {
+        //         width: pxToRem(1200px);
+        //         height: pxToRem(1200px);
+        //     }
+        // }
+
+        .shia-vr {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &__col {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        flex: 1 0 0;
+
+        @include mq('<=tablet') {
+            margin-top: pxToRem(80px);
+        }
+    }
+
+    .shiaverse-coins {
+        position: absolute;
+        left: 30px;
+        transform: translateY(-85px);
+        max-width: 432px;
+        width: 100%;
+        mix-blend-mode: hard-light;
+        animation: float 20s ease-in-out infinite;
+
+        @include mq('<=tablet') {
+            max-width: 220px;
+        }
+
+    }
+    
+    // .shiaverse-coin {
+    //     z-index: 3;
+    //     top: -50px;
+    //     left: -100px;
+    //     max-width: 420px;
+    //     position: absolute;
+    //     animation: float 12s ease-in-out infinite;
+
+    //     @include mq('<=tablet') {
+    //         max-width: 220px;
+    //     }
+    // }
+}
+

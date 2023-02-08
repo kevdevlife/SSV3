@@ -1,0 +1,280 @@
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: pxToRem(32px) pxToRem(20px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+
+    &--is-sticky {
+        background-color: $color-bg;
+    }
+
+    @include mq(">=desktop") {
+        width: 100%;
+        padding-left: pxToRem(32px);
+        padding-right: pxToRem(32px);
+        max-width: 100%;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+
+        @include mq(">=desktop") {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    &__nav {
+        @include mq("<=desktop") {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            background-color: #1f1e29;
+            z-index: 4;
+            padding-left: pxToRem(16px);
+            padding-right: pxToRem(16px);
+            padding-top: pxToRem(100px);
+            transform: translateY(-100vh);
+            opacity: 0;
+            transition: transform 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 50%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            //     width: pxToRem(1024px);
+            //     height: pxToRem(1024px);
+            //     background: radial-gradient(circle, rgba(92, 92, 136, 0.5) 0%, rgba(31, 30, 41, 1) 60%);
+            //     background-size: 1600px 1600px;
+            //     border-radius: 50%;
+            //     z-index: -1;
+            //     opacity: 0.8;
+            //     animation: gradient 15s ease infinite;
+            // }
+
+            &--is-visible {
+                transform: translateY(0);
+                transition: transform 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                animation-direction: alternate;
+                opacity: 1;
+            }
+        }
+
+        @include mq(">=desktop") {
+            display: flex;
+            align-items: center;
+            transform: translate(0);
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        height: 41px;
+        position: relative;
+        z-index: 10;
+
+        svg {
+            width: 200px;
+            height: auto;
+
+            @include mq(">=desktop") {
+                width: 220px;
+            }
+
+            @include mq(">=desktop-large") {
+                width: 314px;
+            }
+        }
+    }
+
+    /**
+     * Menu item 
+     */
+    &__menu {
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+
+        @include mq(">=desktop") {
+            flex-direction: row;
+        }
+    }
+
+    &__menu-item {
+        margin-bottom: pxToRem(20px);
+
+        @include mq(">=tablet") {
+            &:not(:last-child) {
+                margin-right: pxToRem(20px);
+            }
+        }
+
+        @include mq(">=desktop") {
+            &:not(:last-child) {
+                margin-right: pxToRem(32px);
+            }
+        }
+    }
+
+    &__menu-link {
+        color: $color-white;
+        font-weight: $font-weight-medium;
+        display: block;
+        padding: pxToRem(5px) pxToRem(12px);
+
+        @include mq("<=tablet") {
+            padding: 0;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__burger {
+        position: relative;
+        z-index: 10;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: pxToRem(3px) 0 0 0;
+
+        @include mq(">=desktop") {
+            display: none;
+            visibility: hidden;
+        }
+
+        .line {
+            width: 32px;
+            height: 2px;
+            display: block;
+            margin: 8px auto;
+            background-color: $color-white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &--is-active {
+            .line {
+                &:nth-child(1) {
+                    transform: translateY(10px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-10px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &__btn {
+        overflow: hidden;
+        margin-left: pxToRem(48px);
+
+        @include mq("<=desktop") {
+            margin-top: pxToRem(16px);
+            margin-left: 0;
+        }
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    @include mq("<=desktop") {
+        display: none;
+        margin-left: pxToRem(16px);
+        width: 100%;
+        margin-bottom: pxTorem(16px);
+    }
+
+    &__btn {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        color: $color-white;
+        position: relative;
+        cursor: pointer;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            right: -13px;
+            transform: translateY(-50%);
+            width: 8.48px;
+            height: 4.24px;
+        }
+
+        &:hover {
+            transition: 300ms ease-in-out all;
+            color: $color-primary;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        opacity: 0;
+        top: 60px;
+        background-color: #17161c;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        border-radius: 5px;
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 32px, 0px);
+        transition: 300ms ease-in-out all;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            width: 0;
+            height: 0;
+            display: inline-block;
+            border: 10px solid transparent;
+            border-bottom-color: #17161c;
+        }
+
+        &--is-visible {
+            opacity: 1;
+            transform: translate3d(0px, 0, 0px);
+        }
+
+        li {
+            padding: pxToRem(8px) pxToRem(16px);
+            text-decoration: none;
+            font-weight: $font-weight-bold;
+            display: block;
+            font-size: pxToRem(14px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+            a {
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
