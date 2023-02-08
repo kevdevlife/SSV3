@@ -5,6 +5,7 @@
     padding-top: pxToRem(60px);
     padding-bottom: pxToRem(60px);
     background: linear-gradient(#ffc22d 0%, #ffa229 100%);
+    overflow: hidden;
 
     @include mq(">=tablet") {
         padding-top: pxToRem(260px);

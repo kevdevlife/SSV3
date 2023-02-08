@@ -1,8 +1,12 @@
 .staking {
     position: relative;
-    padding-top: pxToRem(140px);
+    padding-top: pxToRem(160px);
     padding-bottom: pxToRem(140px);
 
+    @include mq(">=desktop") {
+        padding-top: pxToRem(160px);
+    }
+    
     .grid {
         @include mq(">=desktop") {
             align-items: center;
@@ -10,10 +14,7 @@
             // padding-top: pxToRem(300px);
         }
     }
-    
-    @include mq(">=desktop") {
-        padding-top: pxToRem(90px);
-    }
+
     
     &__image {
         position: relative;

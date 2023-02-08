@@ -12,7 +12,7 @@ export const enterSite = () => {
     ease: 'power2.inOut',
     yPercent: -100,
     duration: 1,
-    delay: 2,
+    delay: 1,
   })
 }
 
@@ -122,6 +122,7 @@ export const animateGames = () => {
         {
           opacity: 0,
           scale: 0.8,
+          delay: 1,
         },
         {
           opacity: 1,
@@ -228,20 +229,89 @@ export const animateShiaverse = () => {
       .timeline({
         scrollTrigger: {
           trigger: shiaverse,
-          start: '50% 50%',
-          end: '100% 100%',
-          scrub: 1.1,
-          pin: true,
-          pinSpacing: true,
+          start: '20% 50%',
+          // end: '100% 100%',
         },
       })
       .from('.shia-vr', {
-        y: 100,
-        opacity: 0,
+        y: '100%',
       })
       .from('.shiaverse-coins', {
         scale: 0.8,
         opacity: 0,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .from('.shiaverse-coins', {
+        scale: 0.8,
+        opacity: 0,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1,
+      })
+      .to('.shiaverse-fist', {
+        scale: 1.1,
       })
   })
 
@@ -273,7 +343,7 @@ export const footerAnimation = () => {
       {
         scrollTrigger: {
           trigger: community,
-          start: '-55% center',
+          start: '-65% center',
         },
       },
       {
@@ -322,4 +392,17 @@ export const footerAnimation = () => {
       },
       '-=.4',
     )
+}
+
+export const animatePresale = () => {
+  const presale = document.getElementById('presale')
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: presale,
+      start: 'top 30%',
+      end: 'bottom 100%',
+      toggleActions: 'play none none none',
+    },
+  })
 }
