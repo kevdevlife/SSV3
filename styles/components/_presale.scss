@@ -1,6 +1,7 @@
 .presale {
     position: relative;
     overflow: hidden;
+    
 
     .container {
         position: relative;
@@ -31,6 +32,7 @@
 
 .progress-wrap {
     margin: 20px 0;
+    padding: 3px;
     overflow: hidden;
     position: relative;
     border-radius: 6px;
@@ -42,10 +44,15 @@
 
     .progress-bar {
         width: 0;
-        left: 0;
         transform-origin: left;
         position: absolute;
-        top: 0;
         background: linear-gradient(120deg, #fc6400, #fda200, #ff5d20);
+        left: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: 4px;
+        right: 4px;
+        height: 32px;
+        border-radius: 3px;
     }
 }

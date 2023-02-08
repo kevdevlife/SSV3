@@ -1,5 +1,6 @@
 import { gsap, Power1 } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { initProgressBar } from './progressBar'
 import $ from 'jquery'
 gsap.registerPlugin(ScrollTrigger)
 
@@ -235,6 +236,7 @@ export const animateShiaverse = () => {
       })
       .from('.shia-vr', {
         y: '100%',
+        duration: 1,
       })
       .from('.shiaverse-coins', {
         scale: 0.8,
@@ -403,6 +405,10 @@ export const animatePresale = () => {
       start: 'top 30%',
       end: 'bottom 100%',
       toggleActions: 'play none none none',
+      markers: true,
+      onEnter: () => {
+        initProgressBar()
+      },
     },
   })
 }

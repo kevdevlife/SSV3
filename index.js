@@ -2,7 +2,14 @@
 // import { footerAnimation } from './scripts/animations'
 import { closeMenu, mobileNav } from './scripts/mobileNav'
 import { initProgressBar } from './scripts/progressBar'
-import { enterSite, shibaNfts, animateGames, animateShiaverse, footerAnimation } from './scripts/animationsv2'
+import {
+  enterSite,
+  shibaNfts,
+  animateGames,
+  animateShiaverse,
+  footerAnimation,
+  animatePresale,
+} from './scripts/animationsv2'
 import { stickyHeader } from './scripts/stickyHeader'
 
 async function init() {
@@ -15,9 +22,10 @@ async function init() {
   // stakingAnimation()
   footerAnimation()
   stickyHeader()
+  animatePresale()
 
-  initProgressBar()
-  animate()
+  // initProgressBar()
+  // animate()
 
   const navLink = document.querySelectorAll('.navbar__menu-link')
   const headerCta = document.getElementById('header-cta')
