@@ -99,7 +99,7 @@ export const animateGames = () => {
         ease: Power1,
         scrollTrigger: {
           trigger: games,
-          start: '0% 0%',
+          start: '-10% 10%',
           end: '100% 0',
           pinSpacing: true,
         },
