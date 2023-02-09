@@ -7,7 +7,6 @@ import {
   shibaNfts,
   animateGames,
   animateShiaverse,
-  footerAnimation,
   animatePresale,
   animateTokenomics
 } from './scripts/animationsv2'
@@ -21,7 +20,6 @@ async function init() {
   animateGames()
   shibaNfts()
   // stakingAnimation()
-  footerAnimation()
   stickyHeader()
   animatePresale()
   animateTokenomics()

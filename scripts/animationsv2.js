@@ -337,63 +337,63 @@ export const animateShiaverse = () => {
   })
 }
 
-export const footerAnimation = () => {
-  const community = document.getElementById('community')
-  gsap
-    .timeline(
-      {
-        scrollTrigger: {
-          trigger: community,
-          start: '-65% center',
-        },
-      },
-      {
-        defaults: {
-          duration: 0.5,
-          ease: Power1,
-        },
-      },
-    )
-    .to('.rocket', {
-      xPercent: 100,
-    })
-    .from('.community__title', {
-      opacity: 0,
-      y: 20,
-    })
-    .from(
-      '.community__text',
-      {
-        opacity: 0,
-        y: 20,
-      },
-      '-=.4',
-    )
-    .from(
-      '.social-list',
-      {
-        opacity: 0,
-        y: 20,
-      },
-      '-=.4',
-    )
-    .from(
-      '.footer__logo',
-      {
-        opacity: 0,
-        y: 20,
-      },
-      '-=.4',
-    )
-    .from(
-      '.footer__copyright',
-      {
-        opacity: 0,
-        y: 20,
-      },
-      '-=.4',
-    )
-}
+// export const footerAnimation = () => {
+//   const community = document.getElementById('community')
+//   gsap
+//     .timeline(
+//       {
+//         scrollTrigger: {
+//           trigger: community,
+//           start: '-65% center',
+//         },
+//       },
+//       {
+//         defaults: {
+//           duration: 0.5,
+//           ease: Power1,
+//         },
+//       },
+//     )
+//     .to('.rocket', {
+//       xPercent: 100,
+//     })
+//     .from('.community__title', {
+//       opacity: 0,
+//       y: 20,
+//     })
+//     .from(
+//       '.community__text',
+//       {
+//         opacity: 0,
+//         y: 20,
+//       },
+//       '-=.4',
+//     )
+//     .from(
+//       '.social-list',
+//       {
+//         opacity: 0,
+//         y: 20,
+//       },
+//       '-=.4',
+//     )
+//     .from(
+//       '.footer__logo',
+//       {
+//         opacity: 0,
+//         y: 20,
+//       },
+//       '-=.4',
+//     )
+//     .from(
+//       '.footer__copyright',
+//       {
+//         opacity: 0,
+//         y: 20,
+//       },
+//       '-=.4',
+//     )
+// }
 
 export const animatePresale = () => {
   const presale = document.getElementById('presale')
