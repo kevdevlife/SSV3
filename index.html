@@ -9,22 +9,25 @@
         <p class="preloader__text">Explore the saga</p>
       </div>
     </div>
-    
+
     <div class="wrapper">
-      {{> header}} 
-      {{> hero}} 
-      {{> games}}
-      {{> shiaverse}} 
-      {{> nfts}} 
-      {{> staking}} 
-      {{> tokenomics}}
-      {{> community}} 
-      {{> footer}} 
-      {{> scripts}}
+      {{> header}} {{> hero}} {{> games}} {{> shiaverse}} {{> nfts}} {{> staking}} {{> tokenomics}} {{> community}} {{>
+      footer}} {{> scripts}}
     </div>
 
     <canvas id="gradient-canvas"></canvas>
 
     <!-- . / wrapper -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7V7MBFZQHK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-7V7MBFZQHK')
+    </script>
   </body>
 </html>
