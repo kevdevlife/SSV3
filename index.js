@@ -2,7 +2,6 @@
 // import { footerAnimation } from './scripts/animations'
 import { closeMenu, mobileNav } from './scripts/mobileNav'
 import { enterSite, shibaNfts, animateGames, animateShiaverse, animateTokenomics } from './scripts/animationsv2'
-import { stickyHeader } from './scripts/stickyHeader'
 
 async function init() {
   // import all your functions/code there
@@ -22,8 +21,6 @@ async function init() {
       closeMenu()
     }),
   )
-
-  window.onscroll = function() {stickyHeader()};
 }
 
 if (document.readyState === 'complete') {
