@@ -1,15 +1,7 @@
 // import { animateGames, animateShiaverse, enterSite, shibaNfts, stakingAnimation } from './scripts/animations'
 // import { footerAnimation } from './scripts/animations'
 import { closeMenu, mobileNav } from './scripts/mobileNav'
-import { initProgressBar } from './scripts/progressBar'
-import {
-  enterSite,
-  shibaNfts,
-  animateGames,
-  animateShiaverse,
-  animatePresale,
-  animateTokenomics
-} from './scripts/animationsv2'
+import { enterSite, shibaNfts, animateGames, animateShiaverse, animateTokenomics } from './scripts/animationsv2'
 import { stickyHeader } from './scripts/stickyHeader'
 
 async function init() {
@@ -19,16 +11,9 @@ async function init() {
   animateShiaverse()
   animateGames()
   shibaNfts()
-  // stakingAnimation()
-  stickyHeader()
-  animatePresale()
   animateTokenomics()
 
-  // initProgressBar()
-  // animate()
-
   const navLink = document.querySelectorAll('.navbar__menu-link')
-  const headerCta = document.getElementById('header-cta')
   const burger = document.getElementById('burger')
 
   navLink.forEach((n) =>
@@ -38,10 +23,7 @@ async function init() {
     }),
   )
 
-  headerCta.addEventListener('click', () => {
-    closeMenu()
-    burger.classList.remove('navbar__burger--is-active')
-  })
+  window.onscroll = function() {stickyHeader()};
 }
 
 if (document.readyState === 'complete') {
