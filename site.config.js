@@ -7,7 +7,7 @@ export const siteConfig = {
   twitter: '@author', // Twitter of the author.
   lang: 'en',
   image: 'ogimage.jpg',
-  url: 'https://shiba-saga.io', // Domain of your website without pathPrefix.
+  url: 'https://shibasaga.com', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/sub-folder/.
   themeColor: '#1F1E29', // Used for setting manifest and progress theme colors.
   backgroundColor: '#1F1E29', // Used for setting manifest background color.
