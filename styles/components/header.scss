@@ -11,10 +11,6 @@
     z-index: 100;
     transition: 300ms ease-in all;
 
-    &--is-sticky {
-        background-color: $color-bg;
-    }
-
     @include mq(">=desktop") {
         width: 100%;
         padding-left: pxToRem(32px);
