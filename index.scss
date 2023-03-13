@@ -99,7 +99,7 @@
         background: linear-gradient(#1f1e29 0%, #302f44 100%);
         border-radius: 8px;
         overflow: hidden;
-        height: 68px;
+        height: 72px;
         display: flex;
         align-items: center;
         padding: 0 pxToRem(32px);
@@ -178,8 +178,12 @@
 
     &__small-text {
         color: rgba(255, 255, 255, 0.5);
-        font-size: pxToRem(13px);
+        font-size: pxToRem(11px);
         font-weight: medium;
+
+        .tokenomics-list__col:nth-child(1) & {
+            padding-right: 2rem;
+        }
 
         @include mq('<=tablet') {
             font-size: pxToRem(9px);            
@@ -189,6 +193,8 @@
     &__number {
         font-size: pxTorem(20px);
         font-weight: bold;
+        flex-shrink: 0;
+        min-width: 120px;
 
         @include mq('<=tablet') {
             font-size: pxToRem(14px);
